@@ -86,6 +86,7 @@ set_up_master(){
 
 set_up_env(){
 
+    mkdir slaves
     download_mos_image
     install_packages
     set_up_kvm
