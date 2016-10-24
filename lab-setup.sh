@@ -3,9 +3,14 @@
 MOS="http://9f2b43d3ab92f886c3f0-e8d43ffad23ec549234584e5c62a6e24.r60.cf1.rackcdn.com/MirantisOpenStack-9.0.iso"
 
 download_mos_image(){
-    echo "Downloading MOS image"
-    wget -q $MOS -o /dev/null
-    echo "Downloaded MOS image"
+
+    if [ ! -f MirantisOpenStack-9.0.iso ]; then
+
+        echo "Downloading MOS image"
+        wget -q $MOS -o /dev/null
+        echo "Downloaded MOS image"
+    fi
+
 }
 
 install_packages(){
