@@ -3,10 +3,13 @@
 MOS="http://9f2b43d3ab92f886c3f0-e8d43ffad23ec549234584e5c62a6e24.r60.cf1.rackcdn.com/MirantisOpenStack-9.0.iso"
 
 download_mos_image(){
+    echo "Downloading MOS image"
     wget -q $MOS -o /dev/null
+    echo "Downloaded MOS image"
 }
 
 install_packages(){
+    export DEBIAN_FRONTEND="noninteractive"
     apt-get update && apt-get upgrade -y
     apt install qemu-kvm libvirt-bin virtinst qemu-utils -y
 }
@@ -72,7 +75,7 @@ set_up_master(){
     sleep 10
 
     # insert keystrokes on boot to append showmenu=no
-    virsh send-key fuel-auto KEY_TAB KEY_SPACE KEY_S KEY_H KEY_O KEY_W KEY_M KEY_E KEY_N KEY_U KEY_EQUAL KEY_N KEY_O KEY_ENTER
+    virsh send-key fuel-master KEY_TAB KEY_SPACE KEY_S KEY_H KEY_O KEY_W KEY_M KEY_E KEY_N KEY_U KEY_EQUAL KEY_N KEY_O KEY_ENTER
 
 }
 
