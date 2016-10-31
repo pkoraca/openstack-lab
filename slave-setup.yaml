@@ -1,7 +1,7 @@
 ---
 roles:
   - name: controller
-    num: 5
+    num: 3
     vcpus: 1
     ram: 2048
     disk: 120
