@@ -73,7 +73,7 @@ configure_iptables(){
 
 set_up_master(){
 
-    virt-install --connect qemu:///system --virt-type kvm --name fuel-master --ram 2048 \
+    virt-install --connect qemu:///system --virt-type kvm --name fuel-master --ram 2048 --vcpus 2 \
     --disk path=fuel-master.qcow2,size=60 --graphics vnc --network network=ostlab-mgmt \
     --cdrom ./MirantisOpenStack-9.0.iso &2> /dev/null
 

@@ -3,17 +3,17 @@ roles:
   - name: controller
     num: 5
     vcpus: 1
-    ram: 2
+    ram: 2048
     disk: 120
 
   - name: compute
     num: 2
     vcpus: 1
-    ram: 2
+    ram: 2048
     disk: 120
 
   - name: cinder
     num: 2
     vcpus: 1
-    ram: 2
+    ram: 2048
     disk: 120
