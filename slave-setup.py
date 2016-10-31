@@ -9,7 +9,7 @@ def create_vm(name, ram, vcpus, disk):
        --network network=ostlab-mgmt \
        --network network=ostlab-internal --pxe \
        --graphics vnc,listen=0.0.0.0 --noautoconsole \
-       --os-type=linux --os-variant=rhel7 --check all=off" % (name, ram, vcpus, name, disk)
+       --os-type=linux --os-variant=ubuntutrusty --check all=off" % (name, ram, vcpus, name, disk)
 
 	subprocess.call(bash_command.split())
 

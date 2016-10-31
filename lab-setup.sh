@@ -42,7 +42,7 @@ cat <<EOF >ostlab-internal.xml
   <forward mode='nat'/>
   <bridge name='virbr2' stp='on' delay='0'/>
   <domain name='ostlab-internal'/>
-  <ip address='10.20.203.1' netmask='255.255.255.0'>
+  <ip address='172.16.0.1' netmask='255.255.255.0'>
   </ip>
 </network>
 EOF
