@@ -12,9 +12,7 @@ Build Lab environment:
 - ```terraform apply openstack-lab```
 
 When Fuel master provisions, connect to it via SSH (```ssh root@10.20.0.2``` with r00tme pwd).
-Configure local mirrors for faster deployment: 
-
-```fuel-createmirror```
+Configure local mirrors for faster deployment: ```fuel-createmirror```
 
 ### Slaves
 
