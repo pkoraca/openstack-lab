@@ -19,8 +19,8 @@ Configure local mirrors for faster deployment:
 ### Slaves
 
 Slave provisioning is done separately. Slaves are described in slave-setup.yaml. You can add your sections, ie. Ceph nodes.
+
 ```
-# cat openstack-lab/slave-setup.yaml
 ---
 roles:
   - name: controller
