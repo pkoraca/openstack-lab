@@ -84,23 +84,9 @@ set_up_master(){
 
 }
 
-set_up_env(){
-
-    mkdir slaves
-    download_mos_image
-    install_packages
-    set_up_kvm
-    configure_iptables
-    set_up_master
-
-}
-
-while true; do
-    echo "This script will set up Openstack Fuel environment"
-    read -p "Do you wish to reconfigure?" yn
-    case $yn in
-        [Yy]* ) set_up_env ; break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
+mkdir slaves
+download_mos_image
+install_packages
+set_up_kvm
+configure_iptables
+set_up_master
