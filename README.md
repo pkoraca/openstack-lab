@@ -1,4 +1,4 @@
-# Scripts for automated Mirantis Openstack 9.0 Fuel Lab deploy.
+# Scripts for automated Mirantis Openstack 9.0/9.1 Fuel Lab deploy.
 
 ### Prerequisites:
 - Terraform on your workstation
@@ -12,6 +12,16 @@ Build Lab environment:
 - ```terraform apply openstack-lab```
 
 When Fuel master provisions, connect to it via SSH (```ssh root@10.20.0.2``` with r00tme pwd).
+
+In case of upgrade to MOS 9.1, next commands are needed on Fuel master:
+
+```
+yum clean all
+yum install python-cudet -y
+update-prepare prepare master
+update-prepare update master
+```
+
 Configure local mirrors for faster deployment: ```fuel-createmirror```
 
 ### Slaves:
